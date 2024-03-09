@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ -f ~/.bashrc ];then
+echo "file .bashrc is found now making your changes ...."
+
+echo 'export HELLO=$HOSTNAME' >> ~/.bashrc
+echo 'LOCAL=`whoami`' >> ~/.bashrc 
+
+source ~/.bashrc
+
+else
+echo "file .bashrc is NOT FOUND"
+
+fi
+
+gnome-terminal &
