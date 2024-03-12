@@ -1,1 +1,0 @@
-# Embedded_Linux_NTI
