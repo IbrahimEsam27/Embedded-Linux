@@ -1,0 +1,1 @@
+we can run BinarySearch.c from anywhere in system beacause we put the Executable file in usr/local/bin which is a direcrtory that store user-installed executables or scripts that are not provided by the operating system's package manager. and i can run it from any where because it's part of the $PATH 
