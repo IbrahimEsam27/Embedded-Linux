@@ -1,6 +1,6 @@
 # Creating initramfs
 `initramfs` (initial ramdisk filesystem) is a temporary, early root filesystem that is mounted before the real root filesystem becomes available during the Linux kernel's initialization process. It is commonly used in the boot process to perform tasks such as loading essential kernel modules, configuring devices, and preparing the system for the transition to the actual root filesystem.
-*Why?**
+**Why?**
 - to check **integrity** of the primary rootfs *(in sd for example)* ... like when a new rootfs is being flashed.
 - choose what's necessary to be mounted and used from rootfs initially.
 
