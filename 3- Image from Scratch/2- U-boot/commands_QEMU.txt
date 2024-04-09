@@ -1,0 +1,48 @@
+qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel ~/bootloader/u-boot/u-boot -sd ~/bootloader/sd.img
+
+#to add ethernet 
+qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel ~/bootloader/u-boot/u-boot -sd  ~/bootloader/sd.img -net tap,script=./qemu-ifup -net nic
+
+
+#initilize uboot
+export CROSS_COMPILE=/home/ibrahim/x-tools/arm-cortexa9_neon-linux-musleabihf/bin/arm-cortexa9_neon-linux-musleabihf-
+export ARCH=arm
+
+# attach the sd.img to be treated as block storage
+sudo losetup -f --show --partscan ~/bootloader/sd.img
+
+# Formating the first partition as FAT
+sudo mkfs.vfat -F 16 -n boot /dev/loop15p1
+
+# format the created partition by ext4
+sudo mkfs.ext4 -L rootfs /dev/loop15p2
+
+sudo mount /dev/loop15p1 /media/ibrahim/boot
+sudo mount /dev/loop15p2 /media/ibrahim/roofs
+
+
+#uboot commands 
+
+fatload mmc 0:1 $kernel_addr_r zImage
+
+fatload mmc 0:1 $fdt_addr_r vexpress-v2p-ca9.dtb
+
+setenv bootargs console=ttyAMA0 root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait init=/sbin/init
+
+bootz $kernel_addr_r - $fdt_addr_r
+
+#initramfs
+setenv initramfs 0x61000000
+
+fatload mmc 0:1 $fdt_addr_r vexpress-v2p-ca9.dtb
+
+fatload mmc 0:1 $initramfs uRamdisk
+
+setenv bootargs "console=ttyAMA0 rdinit=/bin/sh"
+
+saveenv
+
+bootz $kernel_addr_r $initramfs $fdt_addr_r
+
+
+
