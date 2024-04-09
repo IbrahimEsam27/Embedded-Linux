@@ -58,12 +58,12 @@ Configure Linux:
 # to change configuration for linux 
 make linux-menuconfig
 ```
-Configure uboot:
+#### Configure uboot:
 ```bash
 # to configure uboot
 make uboot-menuconfig
 ```
-Configure Busybox:
+#### Configure Busybox:
 ```bash
 # to configure busybox
 make busybox-menuconfig
@@ -71,7 +71,7 @@ make busybox-menuconfig
 ---
 ## Boot The System
 
-Qemu:
+#### Qemu:
 
 ```bash
 cd ~/buildroot-2024.02/output/images 
