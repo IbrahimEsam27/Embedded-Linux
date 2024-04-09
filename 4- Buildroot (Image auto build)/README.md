@@ -189,4 +189,10 @@ endmenu
 By following these steps, you've successfully added a custom package to Buildroot and tested it on QEMU.
 
 ---
+# Results
 
+Here are the screenshots of the results:
+
+![my_package](https://github.com/IbrahimEsam27/Embedded-Linux/blob/main/4-%20Buildroot%20(Image%20auto%20build)/Make_Your_Package/package_build.png?raw=true)
+
+![test_result](https://github.com/IbrahimEsam27/Embedded-Linux/blob/main/4-%20Buildroot%20(Image%20auto%20build)/Make_Your_Package/buildroot_kernel.png?raw=true)
