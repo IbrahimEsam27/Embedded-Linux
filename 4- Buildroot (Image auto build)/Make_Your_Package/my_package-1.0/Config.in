@@ -1,0 +1,4 @@
+config BR2_PACKAGE_MY_PACKAGE
+    bool "my_package"
+    help
+      Hello World Package
