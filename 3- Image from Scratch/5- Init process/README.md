@@ -143,7 +143,7 @@ Create the **service script** inside **`/etc/init.d`** directory ... that will b
 ``` sh
 # Create the script inside init.d
 vim anyservice
-# Example --> vim enigmapckg
+# Example --> vim deamonapp
 
 # ... After adding the script
 # Make Sure To chmod to be executable!!!
@@ -152,21 +152,21 @@ chmod +x anyservice
 
 ``` sh
 #!/bin/sh
-# Running Enigma Service ...
+# Running deamonapp Service ...
 
 case "$1" in
       start)
-           echo "Starting Enigma Service........."
-           start-stop-daemon -S -n enigmasrv -a /usr/bin/enigmapckg &
-           # Could be any script or binary rather enigmapckg
+           echo "Starting deamonapp Service........."
+           start-stop-daemon -S -n deamonapp -a /usr/bin/deamonapp &
+           # Could be any script or binary rather deamonapp
            ;;
      stop)
-           echo "Stopping Enigma Service........."
-           start-stop-daemon -K -n enigmasrv
-           # Could be any script or binary rather enigmapckg
+           echo "Stopping deamonapp Service........."
+           start-stop-daemon -K -n deamonapp
+           # Could be any script or binary rather deamonapp
            ;;
 	restart)
-    		echo "Restarting Enigma Service........"
+    		echo "Restarting deamonapp Service........"
     		$0 stop
     		$0 start
     		;;
@@ -176,15 +176,15 @@ case "$1" in
 esac
 exit 0
 ```
-> :grey_exclamation: You can test this service script by running it with start argument **`./enigmapckg start`**
+> :grey_exclamation: You can test this service script by running it with start argument **`./deamonapp start`**
 
 Finally, you can **soft-link** the specific scripts to the corresponding runlevel
 ``` sh
 # Service Script to be started 'S'
-ln -s /etc/init.d/enigmapckg /etc/rc.d/rc3.d/S40enigmapckg
+ln -s /etc/init.d/deamonapp /etc/rc.d/rc3.d/S40deamonapp
 
 # Service Script to be stopped 'K'
-ln -s /etc/init.d/enigmapckg /etc/rc.d/rc4.d/K40enigmapckg
+ln -s /etc/init.d/deamonapp /etc/rc.d/rc4.d/K40deamonapp
 ```
 
 ### Systemd

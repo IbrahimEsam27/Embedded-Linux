@@ -33,7 +33,7 @@ ssh root@192.168.0.100
 ## Successful SSH Connection
 You have successfully connected to the Vexpress board running on QEMU with Buildroot using SSH.
 ## Notes:
-- Ensure that the necessary networking configurations are correctly set up in the QEMU command and the networking script (`/home/eng-tera/sdCard/tftp_bash`)
+- Ensure that the necessary networking configurations are correctly set up in the QEMU command and the networking script (`/home/ibrahim/bootloader/qemu-ifup`)
 tftp_bash Script:
 ```bash
 #!/bin/sh
@@ -79,7 +79,7 @@ bootargs=console=ttyAMA0 root=/dev/nfs ip=192.168.0.100::::eth0 nfsroot=192.168.
 - **`console=ttyAMA0`**: Sets the serial console for kernel messages to `ttyAMA0`.
 - **`root=/dev/nfs`**: Specifies the root filesystem as an NFS mount.
 - **`ip=192.168.0.100::::eth0`**: Sets the IP address and network interface for network communication.
-- **`nfsroot=100.101.102.1:/home/eng-tera/rootfs`**: Specifies the NFS server and directory to be used as the root filesystem.
+- **`nfsroot=100.101.102.1:/home/ibrahim/rootfs`**: Specifies the NFS server and directory to be used as the root filesystem.
 - **`nfsvers=3`**: Specifies that NFS version 3 should be used for the NFS mount.
 - **`tcp`**: Specifies that TCP should be used as the transport protocol for NFS communication.
 - **`rw`**: Specifies that the root filesystem should be mounted with read/write permissions.
