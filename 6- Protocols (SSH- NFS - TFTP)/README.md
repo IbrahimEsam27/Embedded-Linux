@@ -33,7 +33,7 @@ ssh root@192.168.0.100
 ## Successful SSH Connection
 You have successfully connected to the Vexpress board running on QEMU with Buildroot using SSH.
 ## Notes:
-- Ensure that the necessary networking configurations are correctly set up in the QEMU command and the networking script (`/home/eng-tera/sdCard/tftp_bash`)
+- Ensure that the necessary networking configurations are correctly set up in the QEMU command and the networking script (`/home/ibrahim/bootloader/qemu-ifup`)
 tftp_bash Script:
 ```bash
 #!/bin/sh
