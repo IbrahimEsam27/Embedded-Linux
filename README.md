@@ -34,4 +34,4 @@ For each task completed during the NTI program, you'll find a separate file or d
 
 Please navigate through the repository to explore the tasks and their descriptions. Feel free to reach out if you have any questions or feedback!
 
-
+## Special Thanks to Eng. Fady Khalil ([GitHub](https://github.com/FadyKhalil))
