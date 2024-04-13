@@ -172,3 +172,7 @@ Here are some common automatic variables used in Makefiles:
 - **`$*`**: Represents the stem of the target filename. It is used to refer to the part of the filename without its suffix.
 
 ## Building Library project using Makefile
+[Make Library](https://github.com/IbrahimEsam27/Embedded-Linux/tree/main/8-%20Makefile/Make_Library)
+
+### Special Thanks to Eng. Moatasem-Elsayed
+[Makefile Playlist](https://youtube.com/playlist?list=PLkH1REggdbJpmQKm8Nu-H8R81_-c00fpB&si=8L2GfDWdDweAoRTo)
