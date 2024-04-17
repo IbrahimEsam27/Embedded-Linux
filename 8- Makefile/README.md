@@ -1,55 +1,54 @@
 # Makefile
-## what is Make ?
- - Make is a scripting tool is used for building executable according to commands
- - Make tool parse an input file " Makefile"to define rules that it will run
- - two types of Make ( GNU Make - Borland Make)
-## Why we need Make ?
- - to organize the compilation process
- - to run our tools and scripts
- - to automate the process
- - to be fully control on the outputs and its time
-### Basic Syntax
-1) setting rule 
-```bash
- Target : prerequisites
-<tab> Recipe
+# Understanding Make
+
+## Introduction
+Make is a powerful scripting tool utilized for executing commands to build executables efficiently. It enables the organization of the compilation process and provides automation capabilities, offering full control over outputs and their timing.
+
+## Purpose of Make
+Make serves several essential functions in software development:
+
+1. **Compilation Organization:** Make helps in structuring the compilation process, ensuring clarity and efficiency.
+2. **Tool and Script Execution:** It facilitates the execution of various tools and scripts required during the development process.
+3. **Process Automation:** Make automates repetitive tasks, reducing manual effort and enhancing productivity.
+4. **Control Over Outputs:** With Make, developers have complete control over the generated outputs and their timing, ensuring consistency and reliability.
+
+## Key Concepts
+
+### Syntax Overview
+Make utilizes a specific syntax for defining rules and variables:
+
+1. **Rule Definition:** 
+ ```bash
+    Target : Prerequisites
+    <tab> Recipe
+  ```
+2. **Variable Definition:** 
+```make
+    files = main.cpp
+    files += hello.cpp
 ```
-2) Define Variable
-  ```make
- files = main.cpp
- files += hello.cpp
-  ```
-3) substitute variable 
-
-  echo $(files)
-
-4) Disaple Echo 
-	  
-    Using @ ex : 
-  
-  ```make
-  @echo "hello"
-  ```
-5) Access Enviroment Variable
- 
-    it is accessible ex : 
-  ```make
-  echo $(PATH)
-  ```
-6) Access shell commands
-	  
-    example
-  ```make
+### Variable Substitution
+Variables in Make can be substituted using the `$(variable)` syntax. For instance:
+```make
+    echo $(files)
+```
+### Suppressing Output
+To suppress output, the `@` symbol can be used before commands, like so:
+```make
+    @echo "hello"
+```
+### Environment Variable Access
+Environment variables can be accessed within Make using the `$(variable)` syntax. For example:
+```make
+    echo $(PATH)
+```
+### Shell Command Execution
+Make allows the execution of shell commands directly within its rules. For example:
+```make
 clean:
     @rm *.o
     @echo "`date` done" > log.txt
-  ```
-7) Access external scripts   
-    example
-  ```make
-test:
-	python3 analysis.py
-  ```
+```
 ### Functions in Makefile
 ```make
 define Display
