@@ -1,8 +1,3 @@
-<div style="text-align:center;">
-  <img src="https://th.bing.com/th/id/OIG4.urZN5RXOHNgTRWi9q1gN?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Embedded Linux" width="400" style="margin-left:auto; margin-right:auto; display:block;"/>
-</div>
-
----
 
 # NTI Embedded Linux Repository
 
