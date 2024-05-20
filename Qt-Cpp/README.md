@@ -163,5 +163,5 @@ $ ~/Qt/Tools/QtCreator/bin/qtcreator
 	<img  src="https://i.imgur.com/sZNYUnX.png">
 	</p>  
 
-#### You can Check my video Explaining Steps [LinkedIn-Video]()
+#### You can Check my video Explaining Steps [LinkedIn-Video](https://www.linkedin.com/posts/ibrahim-esam-235921170_qt-raspberrypi-yoctoproject-activity-7194033326112837633-CVGJ?utm_source=share&utm_medium=member_desktop)
 #### Project Link [Simple_Login_App_Rasspberrypi4](https://github.com/IbrahimEsam27/Qt-Cpp.git)
